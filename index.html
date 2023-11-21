@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Pontuação | Imersão dev_ Alura</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1834/1834048.png">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="Logo da Alura" class="alura-logo">
+        </header>
+
+        <div class="container">
+
+            <div class="title">
+                <h1>Tabela de Pontuação</h1>
+                <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg"
+                    class="page-logo">
+            </div>
+
+            <div class="add-jogador">
+                <input type="text" id="campoNomeJogador" placeholder="Digite um nome..">
+                <button class="btn-add" onclick="addJogador()"><i class="bi bi-person-plus-fill"></i></button>
+            </div>
+
+            <table style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Participantes</th>
+                        <th>Vitórias</th>
+                        <th>Empates</th>
+                        <th>Derrotas</th>
+                        <th>Pontos</th>
+                        <th colspan="5">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaJogadores">
+                    <tr>
+                        <td>nome</td>
+                        <td>34</td>
+                        <td>44</td>
+                        <td>2</td>
+                        <td>123</td>
+                        <td><button onClick="adicionarVitoria()" class="vitoria">Vitória</button></td>
+                        <td><button onClick="adicionarEmpate()" class="empate">Empate</button></td>
+                        <td><button onClick="adicionarDerrota()" class="derrota">Derrota</button></td>
+                        <td><button class="del"><i class="bi bi-person-dash-fill"></i></button></td>
+                        <td><button class="clean"><i class="bi bi-trash3-fill"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <button class="btn-remove-all" onClick="apagarJogadores()">Remover Jogadores</button>
+            </div>
+        </div>
+
+        <script src="./src/js/index.js"></script>
+    </body>
+
+</html>
